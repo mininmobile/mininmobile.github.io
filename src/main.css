@@ -3,4 +3,32 @@ html, body {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
+	background: linear-gradient(135deg, #804fef, #201654);
+	background-size: 400% 400%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: IPAMonaPGothic, Mona, 'MS PGothic', YOzFontAA97, Verdana, Arial, sans-serif;
+	font-size: 1em;
+	animation: background-gradient 30s ease infinite;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+.container {
+	width: 10vw;
+	margin: 1em;
+	padding: 2em;
+	color: #262626;
+	background: #ddd;
+	border: 1px solid #a3a3a3;
+	border-radius: 1em 0 1em 0;
+}
+
+@keyframes background-gradient {
+	0% { background-position: 0% 14%; }
+	50% { background-position: 100% 87%; }
+	100% { background-position: 0% 14%; }
 }
