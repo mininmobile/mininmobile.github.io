@@ -9,7 +9,7 @@ html, body {
 	align-items: center;
 	justify-content: center;
 	font-family: IPAMonaPGothic, Mona, 'MS PGothic', YOzFontAA97, Verdana, Arial, sans-serif;
-	font-size: 1em;
+	font-size: 0.9em;
 	animation: background-gradient 30s ease infinite;
 }
 
@@ -25,6 +25,16 @@ p, h1, h2, h3, h4, h5, h6 {
 	background: #ddd;
 	border: 1px solid #a3a3a3;
 	border-radius: 1em 0 1em 0;
+}
+
+.container:first-child > p {
+	text-indent: 1em;
+}
+
+@media only screen and (orientation:portrait) {
+	.container{
+		width: 15vw;
+	}
 }
 
 @keyframes background-gradient {
