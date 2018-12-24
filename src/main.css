@@ -4,9 +4,11 @@ html, body {
 	padding: 0;
 	margin: 0;
 	background: #161621;
+	color: #ddd;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	font-family: IPAMonaPGothic, Mona, 'MS PGothic', YOzFontAA97, Verdana, Arial, sans-serif;
 	font-size: 0.9em;
 }
@@ -20,6 +22,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .rainbow {
 	background: red;
+	transition: background 2s;
 	animation: rainbow 5s infinite linear;
 }
 
@@ -49,18 +52,14 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* container content */
 
-.container:first-child > p {
+.about:first-child > p {
+	margin-bottom: 0.5em;
 	text-indent: 1em;
 	font-size: 0.9em;
 }
 
-.container:first-child > p:first-child {
-	margin-bottom: 0.5em;
-}
-
-.container > .title {
-	display: flex;
-	justify-content: flex-end;
+.about:first-child > p:last-child {
+	margin: 0;
 }
 
 .container > h1 {
@@ -81,6 +80,10 @@ p, h1, h2, h3, h4, h5, h6 {
 	padding: 0 0.2em;
 	text-decoration: none;
 	border: 1px solid #a3a3a3;
+}
+
+.container > a::before {
+	content: attr(logo)" ";
 }
 
 /* "responsive design" */
