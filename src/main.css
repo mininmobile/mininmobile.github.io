@@ -42,7 +42,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .container {
 	min-width: 150px;
-	width: 10vw;
+	width: 10.5vw;
 	margin: 1em;
 	padding: 1em;
 	color: #262626;
@@ -52,14 +52,19 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* container content */
 
-.about:first-child > p {
+.about > p {
 	margin-bottom: 0.5em;
 	text-indent: 1em;
 	font-size: 0.9em;
 }
 
-.about:first-child > p:last-child {
-	margin: 0;
+.about > p:last-child {
+	margin-bottom: 0;
+}
+
+.container > .title {
+	display: flex;
+	justify-content: flex-end;
 }
 
 .container > h1 {
@@ -80,10 +85,6 @@ p, h1, h2, h3, h4, h5, h6 {
 	padding: 0 0.2em;
 	text-decoration: none;
 	border: 1px solid #a3a3a3;
-}
-
-.container > a::before {
-	content: attr(logo)" ";
 }
 
 /* "responsive design" */
