@@ -27,7 +27,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes rainbow {
-	from { }
 	to { filter: hue-rotate(360deg); }
 }
 
@@ -79,6 +78,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	text-decoration: underline;
 	cursor: pointer;
 	border: 1px solid transparent;
+	color: inherit !important;
 }
 
 .container > a:hover {
