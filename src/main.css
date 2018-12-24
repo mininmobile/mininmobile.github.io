@@ -3,42 +3,76 @@ html, body {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
-	background: linear-gradient(135deg, #804fef, #201654);
-	background-size: 400% 400%;
+	background: #161621;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: IPAMonaPGothic, Mona, 'MS PGothic', YOzFontAA97, Verdana, Arial, sans-serif;
 	font-size: 0.9em;
-	animation: background-gradient 30s ease infinite;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
 	margin: 0;
+	font-weight: normal;
 }
 
+.wrapper {
+	display: flex;
+}
+
+.wrapper.bottom { align-items: flex-end; }
+.wrapper.top { align-items: flex-start; }
+
 .container {
+	min-width: 150px;
 	width: 10vw;
 	margin: 1em;
-	padding: 2em;
+	padding: 1em;
 	color: #262626;
 	background: #ddd;
 	border: 1px solid #a3a3a3;
-	border-radius: 1em 0 1em 0;
 }
 
 .container:first-child > p {
 	text-indent: 1em;
+	font-size: 0.9em;
+}
+
+.container:first-child > p:first-child {
+	margin-bottom: 0.5em;
+}
+
+.container > .title {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.container > h1 {
+	color: #a3a3a3;
+	font-size: 1em;
+	text-align: right;
+	text-decoration: underline;
+}
+
+.container > a {
+	display: block;
+	text-decoration: underline;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+
+.container > a:hover {
+	padding: 0 0.2em;
+	text-decoration: none;
+	border: 1px solid #a3a3a3;
 }
 
 @media only screen and (orientation:portrait) {
-	.container{
+	.wrapper {
+		flex-direction: column;
+	}
+	
+	.container {
 		width: 15vw;
 	}
-}
-
-@keyframes background-gradient {
-	0% { background-position: 0% 14%; }
-	50% { background-position: 100% 87%; }
-	100% { background-position: 0% 14%; }
 }
