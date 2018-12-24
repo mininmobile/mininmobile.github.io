@@ -16,6 +16,20 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
 
+/* util */
+
+.rainbow {
+	background: red;
+	animation: rainbow 5s infinite linear;
+}
+
+@keyframes rainbow {
+	from { }
+	to { filter: hue-rotate(360deg); }
+}
+
+/* wrappers and containers */
+
 .wrapper {
 	display: flex;
 }
@@ -32,6 +46,8 @@ p, h1, h2, h3, h4, h5, h6 {
 	background: #ddd;
 	border: 1px solid #a3a3a3;
 }
+
+/* container content */
 
 .container:first-child > p {
 	text-indent: 1em;
@@ -66,6 +82,8 @@ p, h1, h2, h3, h4, h5, h6 {
 	text-decoration: none;
 	border: 1px solid #a3a3a3;
 }
+
+/* "responsive design" */
 
 @media only screen and (orientation:portrait) {
 	.wrapper {
